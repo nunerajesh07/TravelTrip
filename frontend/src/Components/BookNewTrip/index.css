@@ -1,0 +1,23 @@
+.book-trip-page {
+    background-color: #f0f4f8; /* Light blue-grey behind everything */
+    min-height: 100vh;
+}
+
+.book-trip-main-content {
+    display: flex;
+    max-width: 950px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Outer shadow */
+    background-color: white; /* Behind sidebar */
+    overflow: hidden; /* Clips the child components' corners */
+    min-height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+    .book-trip-main-content {
+        flex-direction: column;
+        margin: 20px;
+        min-height: auto;
+    }
+}

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+}
+
+.form-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 48px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+    box-sizing: border-box;
+}
+
+.name {
+    font-family: Caveat;
+    text-align: center;
+    font-size: 32px;
+    color: rgba(51, 65, 85, 1);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.login-input {
+    background-color: transparent;
+    border: 1px solid #727272;
+    border-radius: 4px;
+    padding: 14px;
+    color: #000000;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+.login-input:hover {
+    border-color: #ffffff;
+}
+
+.login-input:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.login-input::placeholder {
+    color: #a7a7a7;
+}
+
+.login-button {
+    background-color: #304766;
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 50px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: transform 0.1s ease-in-out, background-color 0.2s;
+}
+
+.login-button:hover {
+    background-color: #304766;
+    transform: scale(1.04);
+}
+
+.login-button:active {
+    transform: scale(1);
+    background-color: #304766;
+}
+
+@media screen and (max-width: 768px) {
+    .login-form {
+        padding: 30px 20px;
+        margin: 0 20px;
+    }
+}

@@ -1,0 +1,75 @@
+.sidebar-container {
+    background-color: white;
+    width: 250px;
+    padding: 60px 30px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+    border-right: 1px solid #f0f0f0; /* Optional separator if needed */
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.step-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #d0d0d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    background-color: white;
+}
+
+.step-label {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.sidebar-item.active .step-circle {
+    background-color: #3b82f6; /* blue */
+    border-color: #3b82f6;
+    color: white;
+}
+
+.sidebar-item.active .step-label {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.sidebar-item.completed .step-circle {
+    background-color: #22c55e; /* green */
+    border-color: #22c55e;
+    color: white;
+}
+
+.sidebar-item.completed .step-label {
+    color: #333; 
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar-container {
+        width: 100%;
+        padding: 20px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .step-label {
+        display: none;
+    }
+}
