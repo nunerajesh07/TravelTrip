@@ -5,7 +5,7 @@ import './index.css'
 
 const Signup = () => {
     const [name, setName] = useState("")
-    const [username, setUsername] = useState("") // this will be used as email
+    const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [errMsg, setErrMsg] = useState("")
     const navigate = useNavigate()

@@ -72,7 +72,7 @@ const MyTrips = () => {
                  destination: editFormData.destination,
                  startDate: editFormData.startDate,
                  endDate: editFormData.endDate,
-                 guests: [editFormData.guests] // Keep array format for consistency
+                 guests: [editFormData.guests]
             }
 
             const response = await fetch(`http://localhost:5000/api/trips/${id}`, {
@@ -86,7 +86,7 @@ const MyTrips = () => {
             const data = await response.json();
             if (response.ok && data.success) {
                 setEditingTrip(null)
-                fetchTrips() // Refresh the list
+                fetchTrips()
             } else {
                 alert(data.message || "Failed to update trip");
             }
