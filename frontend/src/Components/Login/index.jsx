@@ -3,6 +3,8 @@ import Cookies from 'js-cookie'
 import { useNavigate, Navigate, Link } from 'react-router-dom'
 
 import './index.css'
+import API_BASE_URL from '../../config'
+
 
 const Login = () => {
 
@@ -43,7 +45,7 @@ const Login = () => {
             },
             body: JSON.stringify(object)
         }
-        const response = await fetch("http://localhost:5000/api/auth/login", options)
+        const response = await fetch(`${API_BASE_URL}/api/auth/login`, options)
         const data = await response.json()
 
         if (response.ok && data.success) {

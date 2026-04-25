@@ -2,6 +2,8 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie'
 import './index.css'
+import API_BASE_URL from '../../config'
+
 
 const Confirmation = ({ prevStep, name, startLocation, endLocation, startDate, endDate, guests, assistType }) => {
     const navigate = useNavigate();
@@ -18,7 +20,7 @@ const Confirmation = ({ prevStep, name, startLocation, endLocation, startDate, e
         const token = Cookies.get('jwt_token');
 
         try {
-            const response = await fetch("http://localhost:5000/api/trips", {
+            const response = await fetch(`${API_BASE_URL}/api/trips`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

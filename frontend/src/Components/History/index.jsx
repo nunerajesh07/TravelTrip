@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar'
 import Cookies from 'js-cookie'
 import './index.css'
+import API_BASE_URL from '../../config'
+
 
 const History = () => {
     const [trips, setTrips] = useState([]);
@@ -13,7 +15,7 @@ const History = () => {
     const fetchTrips = async () => {
         try {
             const token = Cookies.get('jwt_token');
-            const response = await fetch("http://localhost:5000/api/trips", {
+            const response = await fetch(`${API_BASE_URL}/api/trips`, {
                 headers: {
                     "Authorization": `Bearer ${token}`
                 }
@@ -30,7 +32,7 @@ const History = () => {
     const handleDelete = async (id) => {
         try {
             const token = Cookies.get('jwt_token');
-            const response = await fetch(`http://localhost:5000/api/trips/${id}`, {
+            const response = await fetch(`${API_BASE_URL}/api/trips/${id}`, {
                 method: "DELETE",
                 headers: {
                     "Authorization": `Bearer ${token}`

@@ -98,6 +98,31 @@ TravelTrip/
 
 ---
 
+## 🚀 Deployment
+
+### Backend (Render)
+1. Create a new **Web Service** on [Render](https://render.com/).
+2. Connect your repository.
+3. Set the **Root Directory** to `backend`.
+4. Set the **Build Command** to `npm install`.
+5. Set the **Start Command** to `npm start`.
+6. Add the following **Environment Variables**:
+   - `MONGO_URI`: Your MongoDB Atlas connection string.
+   - `JWT_SECRET`: A secure random string for signing tokens.
+   - `ALLOWED_ORIGINS`: Your Vercel frontend URL (e.g., `https://traveltrip-app.vercel.app`).
+   - `NODE_ENV`: `production`
+
+### Frontend (Vercel)
+1. Create a new project on [Vercel](https://vercel.com/).
+2. Connect your repository.
+3. Set the **Root Directory** to `frontend`.
+4. Vercel will automatically detect the **Vite** framework.
+5. Add the following **Environment Variable**:
+   - `VITE_API_URL`: Your Render backend URL (e.g., `https://traveltrip-api.onrender.com`).
+6. Deploy!
+
+---
+
 ## 📡 API Reference
 
 ### Authentication

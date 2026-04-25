@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useNavigate, Navigate, Link } from 'react-router-dom'
 import Cookies from 'js-cookie'
 import './index.css'
+import API_BASE_URL from '../../config'
+
 
 const Signup = () => {
     const [name, setName] = useState("")
@@ -43,7 +45,7 @@ const Signup = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/auth/register", options)
+            const response = await fetch(`${API_BASE_URL}/api/auth/register`, options)
             const data = await response.json()
 
             if (response.ok && data.success) {
